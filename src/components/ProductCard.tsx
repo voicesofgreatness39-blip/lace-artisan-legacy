@@ -1,40 +1,34 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 interface ProductCardProps {
   name: string;
   description: string;
-  price: string;
   category: string;
+  imageUrl: string;
   imageAlt: string;
 }
 
-const ProductCard = ({ name, description, price, category, imageAlt }: ProductCardProps) => {
+const ProductCard = ({ name, description, category, imageUrl, imageAlt }: ProductCardProps) => {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-      <div className="aspect-square bg-muted relative">
-        {/* Placeholder for product image */}
-        <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-          <span className="text-sm">{imageAlt}</span>
-        </div>
-        <Badge className="absolute top-2 right-2">{category}</Badge>
+      <div className="aspect-square bg-muted relative overflow-hidden">
+        <img 
+          src={imageUrl} 
+          alt={imageAlt}
+          className="w-full h-full object-cover"
+        />
+        <Badge className="absolute top-2 right-2 bg-primary/90 backdrop-blur-sm">{category}</Badge>
       </div>
       <CardHeader>
         <CardTitle className="text-xl">{name}</CardTitle>
-        <CardDescription className="line-clamp-2">{description}</CardDescription>
+        <CardDescription className="line-clamp-3">{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-2xl font-bold text-primary">{price}</p>
+        <p className="text-sm text-muted-foreground italic">
+          Contact us for pricing and availability
+        </p>
       </CardContent>
-      <CardFooter className="flex gap-2">
-        <Button className="flex-1" variant="default">
-          Add to Cart
-        </Button>
-        <Button variant="outline" className="flex-1">
-          View Details
-        </Button>
-      </CardFooter>
     </Card>
   );
 };
