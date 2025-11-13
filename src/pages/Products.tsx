@@ -9,103 +9,88 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-// Sample product data
+// Import product images
+import colorfulBag from "@/assets/products/colorful-granny-square-bag.jpg";
+import whiteElephant from "@/assets/products/white-elephant-piece.jpg";
+import childrenDress from "@/assets/products/green-children-dress.jpg";
+import childrenOutfit from "@/assets/products/children-outfit-cream-pink.jpg";
+import blackGrannyTop from "@/assets/products/black-colorful-granny-square-top.jpg";
+import mintTop from "@/assets/products/mint-crochet-top.jpg";
+import mintTopFringe from "@/assets/products/mint-crochet-top-fringe.jpg";
+
+// Product showcase data
 const products = [
   {
     id: 1,
-    name: "Elegant Table Runner",
-    description: "Handcrafted table runner with traditional floral motifs, perfect for dining rooms",
-    price: "₹2,500",
-    category: "Home Décor",
-    imageAlt: "White lace table runner"
+    name: "Colorful Granny Square Bag",
+    description: "Vibrant handmade crochet bag featuring traditional granny square pattern in bright colors. Perfect for everyday use or as a statement accessory.",
+    category: "Fashion Accessories",
+    imageUrl: colorfulBag,
+    imageAlt: "Colorful crochet bag with granny square pattern on natural lace doily"
   },
   {
     id: 2,
-    name: "Decorative Doilies Set",
-    description: "Set of 6 intricate doilies, ideal for home decoration and gifting",
-    price: "₹1,800",
+    name: "Decorative Elephant Piece",
+    description: "Unique white crochet elephant design, perfect for nursery decoration or as a special gift. Showcases intricate lacework and cultural motifs.",
     category: "Home Décor",
-    imageAlt: "Circular lace doilies"
+    imageUrl: whiteElephant,
+    imageAlt: "White crochet elephant decorative piece"
   },
   {
     id: 3,
-    name: "Lace Curtain Panel",
-    description: "Beautiful window curtain with delicate patterns, adds elegance to any room",
-    price: "₹4,500",
-    category: "Home Décor",
-    imageAlt: "Lace curtain with floral design"
+    name: "Children's Crochet Dress",
+    description: "Beautiful handcrafted dress for children in lime green and grey tones. Delicate pattern work perfect for special occasions or everyday elegance.",
+    category: "Fashion Accessories",
+    imageUrl: childrenDress,
+    imageAlt: "Green and grey children's crochet dress"
   },
   {
     id: 4,
-    name: "Decorative Cushion Cover",
-    description: "Premium cushion cover with traditional crochet work on fine cotton",
-    price: "₹1,200",
-    category: "Home Décor",
-    imageAlt: "Lace cushion cover"
+    name: "Children's Designer Outfit",
+    description: "Handmade children's outfit featuring cream ruffled top with decorative pink flower and matching pink pants with floral accents.",
+    category: "Fashion Accessories",
+    imageUrl: childrenOutfit,
+    imageAlt: "Cream and pink children's crochet outfit"
   },
   {
     id: 5,
-    name: "Lace Collar",
-    description: "Detachable lace collar to enhance any outfit with vintage charm",
-    price: "₹800",
+    name: "Black Granny Square Top",
+    description: "Stunning black top adorned with vibrant multicolored granny square motifs. Contemporary design meets traditional craft technique.",
     category: "Fashion Accessories",
-    imageAlt: "White lace collar"
+    imageUrl: blackGrannyTop,
+    imageAlt: "Black top with colorful granny square crochet pattern"
   },
   {
     id: 6,
-    name: "Bridal Veil Edging",
-    description: "Exquisite lace edging for bridal veils, customizable length",
-    price: "₹3,500",
+    name: "Mint Crochet Top",
+    description: "Light mint-colored crochet top with delicate open-weave pattern. Perfect for warm weather, combining comfort with elegant style.",
     category: "Fashion Accessories",
-    imageAlt: "Delicate bridal lace"
+    imageUrl: mintTop,
+    imageAlt: "Mint colored crochet top with intricate pattern"
   },
   {
     id: 7,
-    name: "Shawl with Lace Border",
-    description: "Elegant shawl featuring hand-crocheted lace border",
-    price: "₹2,800",
+    name: "Mint Fringe Crochet Top",
+    description: "Beautiful mint crochet top featuring circular mandala design with decorative fringe detail. Bohemian style meets traditional craftsmanship.",
     category: "Fashion Accessories",
-    imageAlt: "Lace-bordered shawl"
+    imageUrl: mintTopFringe,
+    imageAlt: "Mint crochet top with fringe detail and circular pattern"
   },
   {
     id: 8,
-    name: "Decorative Hand Fans",
-    description: "Traditional hand fans adorned with intricate lace work",
-    price: "₹650",
-    category: "Fashion Accessories",
-    imageAlt: "Lace decorative fan"
+    name: "Custom Wall Hanging",
+    description: "Personalized wall art featuring your choice of patterns, colors, and size. Perfect for adding handmade charm to any space.",
+    category: "Custom Creations",
+    imageUrl: colorfulBag,
+    imageAlt: "Custom lace wall art example"
   },
   {
     id: 9,
-    name: "Custom Wall Hanging",
-    description: "Personalized wall art featuring your choice of patterns and size",
-    price: "Custom Quote",
+    name: "Bespoke Table Décor",
+    description: "Made-to-order table runners, placemats, and centerpieces with your preferred dimensions, colors, and traditional or contemporary designs.",
     category: "Custom Creations",
-    imageAlt: "Custom lace wall art"
-  },
-  {
-    id: 10,
-    name: "Bespoke Table Cloth",
-    description: "Made-to-order tablecloth with your preferred dimensions and design",
-    price: "Custom Quote",
-    category: "Custom Creations",
-    imageAlt: "Custom tablecloth design"
-  },
-  {
-    id: 11,
-    name: "Personalized Gift Items",
-    description: "Custom lace work for special occasions - weddings, anniversaries, celebrations",
-    price: "Custom Quote",
-    category: "Custom Creations",
-    imageAlt: "Custom gift items"
-  },
-  {
-    id: 12,
-    name: "Custom Fashion Piece",
-    description: "Unique lace accessories designed specifically for your style",
-    price: "Custom Quote",
-    category: "Custom Creations",
-    imageAlt: "Custom fashion lace"
+    imageUrl: whiteElephant,
+    imageAlt: "Custom table décor design"
   },
 ];
 

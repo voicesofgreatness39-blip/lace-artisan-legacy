@@ -4,6 +4,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Scissors, Users, Globe, Heart } from "lucide-react";
+import heroBag from "@/assets/hero-bag-display.jpg";
+import artisansWorking from "@/assets/artisans-working.jpg";
+import colorfulDoilies from "@/assets/artisans-colorful-doilies.jpg";
 
 const Index = () => {
   return (
@@ -191,21 +194,34 @@ const Index = () => {
         <section className="py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-5xl font-bold text-center text-foreground mb-12">
-              Our Creations
+              Our Creations & Artisans
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                <div
-                  key={i}
-                  className="aspect-square bg-muted rounded-lg flex items-center justify-center hover:scale-105 transition-transform"
-                >
-                  <span className="text-muted-foreground text-sm">Lace Image {i}</span>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+              <div className="aspect-square bg-muted rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                <img 
+                  src={heroBag} 
+                  alt="Colorful granny square crochet bag on natural lace doily"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-square bg-muted rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                <img 
+                  src={artisansWorking} 
+                  alt="Women artisans crafting colorful circular crochet doilies"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-square bg-muted rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                <img 
+                  src={colorfulDoilies} 
+                  alt="Artisan workshop with colorful handmade crochet pieces"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
-            <div className="text-center mt-12">
+            <div className="text-center">
               <Button asChild size="lg">
                 <Link to="/products">View All Products</Link>
               </Button>
