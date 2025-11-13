@@ -1,0 +1,20 @@
+# Assets Directory
+
+Place your image assets here:
+
+## Suggested Filenames:
+- hero-lace-image.jpg
+- artisan-working.jpg
+- table-runner-1.jpg
+- doilies-set.jpg
+- lace-curtain.jpg
+- cushion-cover.jpg
+- lace-collar.jpg
+- bridal-veil.jpg
+- shawl-border.jpg
+- hand-fan.jpg
+- gallery-image-1.jpg through gallery-image-8.jpg
+- og-image.jpg (1200x630px for social media)
+- twitter-image.jpg (1200x675px for Twitter)
+
+All images should include proper alt text when used in components for accessibility and SEO.

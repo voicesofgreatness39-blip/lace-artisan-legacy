@@ -57,6 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom Narasapur Lace colors
+        "heritage-gold": "hsl(var(--heritage-gold))",
+        "artisan-brown": "hsl(var(--artisan-brown))",
+        "lace-cream": "hsl(var(--lace-cream))",
       },
       borderRadius: {
         lg: "var(--radius)",
